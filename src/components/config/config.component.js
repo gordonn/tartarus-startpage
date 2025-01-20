@@ -1,9 +1,9 @@
 class ConfigTab extends Component {
   refs = {
-    config: '#config',
+    config: "#config",
     textarea: '#config textarea[type="text"]',
-    save: '.save',
-    close: '.close'
+    save: ".save",
+    close: ".close",
   };
 
   constructor() {
@@ -103,10 +103,7 @@ class ConfigTab extends Component {
   }
 
   imports() {
-    return [
-      this.resources.fonts.roboto,
-      this.resources.icons.material
-    ];
+    return [this.resources.fonts.roboto, this.resources.icons.material];
   }
 
   template() {
@@ -122,13 +119,13 @@ class ConfigTab extends Component {
   }
 
   activate() {
-    this.refs.config.classList.add('active');
+    this.refs.config.classList.add("active");
     this.refs.textarea.scrollIntoView();
     setTimeout(() => this.refs.textarea.focus(), 100);
   }
 
   deactivate() {
-    this.refs.config.classList.remove('active');
+    this.refs.config.classList.remove("active");
   }
 
   saveConfig() {
@@ -140,8 +137,7 @@ class ConfigTab extends Component {
   handleSearch(event) {
     const { key } = event;
 
-    if (key === 'Escape')
-      this.deactivate();
+    if (key === "Escape") this.deactivate();
   }
 
   setEvents() {
@@ -151,7 +147,7 @@ class ConfigTab extends Component {
   }
 
   setConfig() {
-    this.refs.textarea.value =  JSON.stringify(this.config, null, 4);
+    this.refs.textarea.value = JSON.stringify(this.config, null, 4);
   }
 
   connectedCallback() {

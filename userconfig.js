@@ -3,7 +3,7 @@ let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
 const default_config = {
   overrideStorage: true,
   temperature: {
-    location: 'Matão, São Paulo',
+    location: "Vancouver, Cananda",
     scale: "C",
   },
   clock: {
@@ -20,8 +20,8 @@ const default_config = {
     },
   },
   keybindings: {
-    "s": "search-bar",
-    "q": "config-tab",
+    s: "search-bar",
+    q: "config-tab",
   },
   disabled: [],
   localIcons: false,
@@ -31,79 +31,83 @@ const default_config = {
     {
       name: "chi ll",
       background_url: "src/img/banners/cbg-2.gif",
-      categories: [{
-        name: "Social Media",
-        links: [
-          {
-            name: "whatsapp",
-            url: "https://web.whatsapp.com/",
-            icon: "brand-whatsapp",
-            icon_color: "#a9b665",
-          },
-          {
-            name: "twitter",
-            url: "https://twitter.com/home",
-            icon: "brand-twitter-filled",
-            icon_color: "#7daea3",
-          },
-          {
-            name: "reddit",
-            url: "https://www.reddit.com/",
-            icon: "brand-reddit",
-            icon_color: "#e78a4e",
-          },
-          {
-            name: "youtube",
-            url: "https://www.youtube.com/",
-            icon: "brand-youtube-filled",
-            icon_color: "#ea6962",
-          },
-          {
-            name: "twitch",
-            url: "https://www.twitch.tv/",
-            icon: "brand-twitch",
-            icon_color: "#d3869b",
-          },
-        ],
-      }, {
-        name: "Games",
-        links: [
-          {
-            name: "chess",
-            url: "https://www.chess.com/home",
-            icon: "chess-queen-filled",
-            icon_color: "#a9b665",
-          },
-          {
-            name: "monkeytype",
-            url: "https://monkeytype.com/",
-            icon: "keyboard",
-            icon_color: "#e78a4e",
-          },
-          {
-            name: "tetris",
-            url: "https://tetris.com/",
-            icon: "brand-apple-arcade",
-            icon_color: "#ea6962",
-          },
-        ],
-      }, {
-        name: "Video",
-        links: [
-          {
-            name: "disney+",
-            url: "https://www.disneyplus.com/home",
-            icon: "brand-disney",
-            icon_color: "#7daea3",
-          },
-          {
-            name: "primevideo",
-            url: "https://www.primevideo.com/region/eu/?ref_=dv_web_unknown",
-            icon: "brand-amazon",
-            icon_color: "#7daea3",
-          },
-        ],
-      }],
+      categories: [
+        {
+          name: "Social Media",
+          links: [
+            {
+              name: "whatsapp",
+              url: "https://web.whatsapp.com/",
+              icon: "brand-whatsapp",
+              icon_color: "#a9b665",
+            },
+            {
+              name: "twitter",
+              url: "https://twitter.com/home",
+              icon: "brand-twitter-filled",
+              icon_color: "#7daea3",
+            },
+            {
+              name: "reddit",
+              url: "https://www.reddit.com/",
+              icon: "brand-reddit",
+              icon_color: "#e78a4e",
+            },
+            {
+              name: "youtube",
+              url: "https://www.youtube.com/",
+              icon: "brand-youtube-filled",
+              icon_color: "#ea6962",
+            },
+            {
+              name: "twitch",
+              url: "https://www.twitch.tv/",
+              icon: "brand-twitch",
+              icon_color: "#d3869b",
+            },
+          ],
+        },
+        {
+          name: "Games",
+          links: [
+            {
+              name: "chess",
+              url: "https://www.chess.com/home",
+              icon: "chess-queen-filled",
+              icon_color: "#a9b665",
+            },
+            {
+              name: "monkeytype",
+              url: "https://monkeytype.com/",
+              icon: "keyboard",
+              icon_color: "#e78a4e",
+            },
+            {
+              name: "tetris",
+              url: "https://tetris.com/",
+              icon: "brand-apple-arcade",
+              icon_color: "#ea6962",
+            },
+          ],
+        },
+        {
+          name: "Video",
+          links: [
+            {
+              name: "disney+",
+              url: "https://www.disneyplus.com/home",
+              icon: "brand-disney",
+              icon_color: "#7daea3",
+            },
+            {
+              name: "primevideo",
+              url: "https://www.primevideo.com/region/eu/?ref_=dv_web_unknown",
+              icon: "brand-amazon",
+              icon_color: "#7daea3",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "design",
@@ -324,11 +328,11 @@ const default_config = {
 const CONFIG = new Config(saved_config ?? default_config);
 // const CONFIG = new Config(default_config);
 
-(function() {
-  var css = document.createElement('link');
-  css.href = 'src/css/tabler-icons.min.css';
-  css.rel = 'stylesheet';
-  css.type = 'text/css';
+(function () {
+  var css = document.createElement("link");
+  css.href = "src/css/tabler-icons.min.css";
+  css.rel = "stylesheet";
+  css.type = "text/css";
   if (!CONFIG.config.localIcons)
-    document.getElementsByTagName('head')[0].appendChild(css);
+    document.getElementsByTagName("head")[0].appendChild(css);
 })();

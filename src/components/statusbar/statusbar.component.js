@@ -241,8 +241,8 @@ class Statusbar extends Component {
   }
 
   setEvents() {
-    this.refs.tabs.forEach((tab) =>
-      tab.onclick = ({ target }) => this.handleTabChange(target)
+    this.refs.tabs.forEach(
+      (tab) => (tab.onclick = ({ target }) => this.handleTabChange(target)),
     );
 
     document.onkeydown = (e) => this.handleKeyPress(e);
@@ -252,7 +252,7 @@ class Statusbar extends Component {
       if (CONFIG.config.fastlink) {
         window.location.href = CONFIG.config.fastlink;
       }
-    }
+    };
 
     if (CONFIG.openLastVisitedTab) {
       window.onbeforeunload = () => this.saveCurrentTab();
@@ -290,7 +290,7 @@ class Statusbar extends Component {
       this.activateByKey((activeTab + 1) % (this.refs.tabs.length - 1));
     } else {
       this.activateByKey(
-        (activeTab - 1) < 0 ? this.refs.tabs.length - 2 : activeTab - 1,
+        activeTab - 1 < 0 ? this.refs.tabs.length - 2 : activeTab - 1,
       );
     }
   }

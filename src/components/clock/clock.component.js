@@ -1,7 +1,7 @@
 class Clock extends Component {
   refs = {
-    clock: '.clock-time',
-    icon: '.clock-icon'
+    clock: ".clock-time",
+    icon: ".clock-icon",
   };
 
   constructor() {
@@ -9,10 +9,7 @@ class Clock extends Component {
   }
 
   imports() {
-    return [
-      this.resources.icons.material,
-      this.resources.fonts.roboto
-    ];
+    return [this.resources.icons.material, this.resources.fonts.roboto];
   }
 
   style() {
