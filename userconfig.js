@@ -3,7 +3,7 @@ let saved_config = JSON.parse(localStorage.getItem("CONFIG"));
 const default_config = {
   overrideStorage: true,
   temperature: {
-    location: "Vancouver, Cananda",
+    location: "Vancouver, BC",
     scale: "C",
   },
   clock: {
@@ -82,23 +82,11 @@ const default_config = {
               icon: "keyboard",
               icon_color: "#e78a4e",
             },
-            {
-              name: "tetris",
-              url: "https://tetris.com/",
-              icon: "brand-apple-arcade",
-              icon_color: "#ea6962",
-            },
           ],
         },
         {
           name: "Video",
           links: [
-            {
-              name: "disney+",
-              url: "https://www.disneyplus.com/home",
-              icon: "brand-disney",
-              icon_color: "#7daea3",
-            },
             {
               name: "primevideo",
               url: "https://www.primevideo.com/region/eu/?ref_=dv_web_unknown",
